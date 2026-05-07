@@ -1,0 +1,18 @@
+{
+  "extends": "./.wxt/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "types": ["node", "chrome"]
+  },
+  "include": [
+    ".wxt/types/**/*.d.ts",
+    "entrypoints",
+    "src",
+    "wxt.config.ts",
+    "tailwind.config.ts",
+    "postcss.config.js"
+  ]
+}
