@@ -16,6 +16,7 @@ export default defineConfig({
     description: "Developer console for managing Fiber nodes from a browser extension.",
     version: "0.1.0",
     permissions: ["storage", "tabs", "activeTab", "scripting"],
+    host_permissions: ["<all_urls>"],
     action: {
       default_title: "Open Fiber Manager"
     },
