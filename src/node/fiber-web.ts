@@ -125,7 +125,7 @@ export class FiberWebClient implements FiberNodeClient<FiberWasmPageNode> {
   }
 }
 
-const defaultMountPoint = "windows.fiber";
+const defaultMountPoint = "window.fiber";
 
 const defaultListChannelsParams: ListChannelsParams = {
   pubkey: null,

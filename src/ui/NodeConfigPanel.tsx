@@ -18,7 +18,7 @@ type WasmTargetPage = {
   databaseNames: string[];
 };
 
-const defaultMountPoint = "windows.fiber";
+const defaultMountPoint = "window.fiber";
 
 export function NodeConfigPanel({ onAddNode }: NodeConfigPanelProps) {
   const [isOpen, setIsOpen] = useState(false);

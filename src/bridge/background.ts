@@ -127,7 +127,7 @@ function isInspectablePageUrl(url: string | undefined): url is string {
 
 async function probeFiberWasmPage(mountPoint: string): Promise<WasmPageProbeResult> {
   function readMountPoint(path: string): unknown {
-    const normalized = path.trim().replace(/^\s*(globalThis|window|self|windows)\s*\./, "");
+    const normalized = path.trim().replace(/^\s*(globalThis|window|self)\s*\./, "");
     if (!normalized) {
       return window;
     }
@@ -199,7 +199,7 @@ async function probeFiberWasmPage(mountPoint: string): Promise<WasmPageProbeResu
 
 async function callFiberWasmPage(mountPoint: string, method: string, params: unknown[]): Promise<WasmRpcResult> {
   function readMountPoint(path: string): unknown {
-    const normalized = path.trim().replace(/^\s*(globalThis|window|self|windows)\s*\./, "");
+    const normalized = path.trim().replace(/^\s*(globalThis|window|self)\s*\./, "");
     if (!normalized) {
       return window;
     }
